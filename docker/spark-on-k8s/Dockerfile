@@ -1,5 +1,5 @@
 ARG spark_uid=185
-FROM gcr.io/spark-operator/spark-py:v3.1.1
+FROM trivadis/apache-spark-base:3.1.1-hadoop3.2
 
 # Change to root user for installation steps
 USER 0

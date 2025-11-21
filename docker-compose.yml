@@ -1,0 +1,20 @@
+services:
+  merlion:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: merlion
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/dashboard/Dockerfile
+    container_name: merlion-dashboard
+    ports:
+      - "8080:80"
+
+  spark:
+    build:
+      context: .
+      dockerfile: docker/spark-on-k8s/Dockerfile
+    container_name: merlion-spark
